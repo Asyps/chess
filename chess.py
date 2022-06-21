@@ -73,18 +73,18 @@ for i in range(1, 9):
         "type": "pawn",
         "color": "black",
         "moved": False
-    },
+    }
     board[(i, 7)] = {
         "type": "pawn",
         "color": "white",
         "moved": False
-    },
+    }
 
 for i in range(1, 9):
     for j in range(1, 9):
-        coord = (i, j)
+        coord = (j, i)
         if coord in board:
-            print("  ")
-        else:
             print(board[coord]["type"][:2], end="")
+        else:
+            print("  ", end="")
     print()
